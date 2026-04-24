@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Time Table - Grid</title>
+
+<style>
+    body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background: #eef2f7;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 20px;
+        color: #2c3e50;
+    }
+
+    .timetable {
+        display: grid;
+        grid-template-columns: 120px repeat(5, 1fr);
+        grid-auto-rows: 70px;
+        width: 90%;
+        margin: auto;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ffffff;
+        font-size: 15px;
+    }
+
+    .header {
+        background: #6c5ce7;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .time {
+        background: #00b894;
+        color: white;
+        font-weight: bold;
+    }
+
+    .subject {
+        background: #dfe6e9;
+        color: #2d3436;
+    }
+
+    .subject:nth-child(odd) {
+        background: #b2bec3;
+    }
+
+    .lunch {
+        grid-column: 1 / 7;
+        background: #fdcb6e;
+        font-weight: bold;
+        color: #2d3436;
+    }
+
+    .subject:hover {
+        background: #74b9ff;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Weekly Time Table</h1>
+
+<div class="timetable">
+
+    <!-- Header Row -->
+    <div class="cell header">Time</div>
+    <div class="cell header">Monday</div>
+    <div class="cell header">Tuesday</div>
+    <div class="cell header">Wednesday</div>
+    <div class="cell header">Thursday</div>
+    <div class="cell header">Friday</div>
+
+    <!-- Row 1 -->
+    <div class="cell time">9:00 - 10:00</div>
+    <div class="cell subject">Math</div>
+    <div class="cell subject">Science</div>
+    <div class="cell subject">HTML</div>
+    <div class="cell subject">Java</div>
+    <div class="cell subject">English</div>
+
+    <!-- Row 2 -->
+    <div class="cell time">10:00 - 11:00</div>
+    <div class="cell subject">Physics</div>
+    <div class="cell subject">Chemistry</div>
+    <div class="cell subject">CSS</div>
+    <div class="cell subject">Python</div>
+    <div class="cell subject">Biology</div>
+
+    <!-- Row 3 -->
+    <div class="cell time">11:00 - 12:00</div>
+    <div class="cell subject">Math</div>
+    <div class="cell subject">Science</div>
+    <div class="cell subject">JS</div>
+    <div class="cell subject">Java</div>
+    <div class="cell subject">English</div>
+
+    <!-- Lunch -->
+    <div class="cell lunch">Lunch Break (12:00 - 1:00)</div>
+
+    <!-- Row 4 -->
+    <div class="cell time">1:00 - 2:00</div>
+    <div class="cell subject">English</div>
+    <div class="cell subject">Math</div>
+    <div class="cell subject">HTML</div>
+    <div class="cell subject">Python</div>
+    <div class="cell subject">Physics</div>
+
+    <!-- Row 5 -->
+    <div class="cell time">2:00 - 3:00</div>
+    <div class="cell subject">Sports</div>
+    <div class="cell subject">Library</div>
+    <div class="cell subject">Project</div>
+    <div class="cell subject">Lab</div>
+    <div class="cell subject">Activity</div>
+
+</div>
+
+</body>
+</html>
